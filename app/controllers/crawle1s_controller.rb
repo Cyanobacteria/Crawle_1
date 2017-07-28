@@ -34,7 +34,7 @@ class Crawle1sController < ApplicationController
   def page2
     url = "https://www.openfoundry.org/tw/tech-column/8478--ruby-on-rails-crud"
     doc = Nokogiri::HTML(open( url ))
-    @test = doc.xpath("//p")
+    @test = doc.xpath("//p")[10]
   end
   
   def page3
@@ -43,4 +43,16 @@ class Crawle1sController < ApplicationController
     #@test = doc.xpath("//p")
     @test= doc
   end
+  def page4
+    url = "http://taqm.epa.gov.tw/taqm/tw/Aqi/North.aspx?type=all&fm=AqiMap" 	
+    doc = Nokogiri::HTML(open( url ))
+
+    #doc = Nokogiri::HTML( open( url ), nil, 'UTF-8' )
+    #@title = doc.xpath("//span[@id='ctl09_gv2_ctl01_labSortNO2']")
+    #@title = doc.xpath(//"[@id='ctl09_gv2_ctl01_labSortNO2']")
+    #@title = doc.xpath('//span')
+    #@title = doc
+    @test = "hihi"
+  end
+  
 end
