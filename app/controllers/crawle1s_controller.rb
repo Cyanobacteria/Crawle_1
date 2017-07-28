@@ -2,7 +2,9 @@ require 'nokogiri'
 require 'open-uri'
 class Crawle1sController < ApplicationController
   
+  def index
 
+  end
   
 
   def page1
